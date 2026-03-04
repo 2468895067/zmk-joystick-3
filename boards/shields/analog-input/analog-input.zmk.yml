@@ -1,9 +1,0 @@
-file_format: "1"
-id: analog-input
-name: ANALOG-INPUT
-type: shield
-url: https://github.com/hidsh/zmk-analog-input
-requires: [seeed_xiao]
-features:
-  - keys
-  - pointer

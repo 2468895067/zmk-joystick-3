@@ -20,7 +20,7 @@
     &kp PG_UP  &mo 2          &mkp LCLK  &kp UP_ARROW  &trans     &trans         
             >;
             //MOUSE WHEEL
-            joystick_listener: joystick_listener {
+            joystick_listener {
                 compatible = "zmk,input-listener";
                 device = <&anin1>;
             };
@@ -33,7 +33,7 @@
         &kp V   &mo 2  &kp E      &kp K  &trans  &trans              
             >;
             //MOUSE MOVE
-            joystick_listener: joystick_listener {
+            joystick_listener {
                 compatible = "zmk,input-listener";
                 device = <&anin0>;
             };

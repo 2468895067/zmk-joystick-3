@@ -19,6 +19,10 @@
     &kp HOME   &kp END        &kp ENTER  &kp LEFT      &kp RIGHT  &mo 3         
     &kp PG_UP  &mo 2          &mkp LCLK  &kp UP_ARROW  &trans     &trans         
             >;
+            //MOUSE WHEEL
+            joystick_listener: joystick_listener {
+                compatible = "zmk,input-listener";
+                device = <&anin1>;
         };
 
         second_layer {
@@ -27,6 +31,11 @@
         &kp I   &kp O  &kp LCTRL  &kp J  &kp L   &mo 3               
         &kp V   &mo 2  &kp E      &kp K  &trans  &trans              
             >;
+            //MOUSE MOVE
+            joystick_listener: joystick_listener {
+                compatible = "zmk,input-listener";
+                device = <&anin0>;
+            };
         };
 
         third_layer {

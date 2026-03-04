@@ -50,6 +50,8 @@
 };
 
 / {
+
+	// MOUSE  MOVE
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
@@ -81,11 +83,149 @@
 
 		};
 	};
+
+
+	// MOUSE WHEEL
+	anin1: analog_input_1 {
+		compatible = "zmk,analog-input";
+		sampling-hz = <100>;
+		x-ch {
+			io-channels = <&adc 0>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <100>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_REL>;
+			input-code = <INPUT_REL_HWHEEL>;
+		};
+		y-ch {
+			io-channels = <&adc 1>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <100>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_REL>;
+			input-code = <INPUT_REL_WHEEL>;
+
+			/* enable report mdoe for gamepad axix or knob */
+			/* to only call input_report on quantquantized value is updated */
+			report-on-change-only;
+
+		};
+	};
+
+
+	// WASD  ??
+	anin2: analog_input_2 {
+		compatible = "zmk,analog-input";
+		sampling-hz = <100>;
+		x-ch {
+			io-channels = <&adc 0>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <300>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_KEY>;
+			input-code = <INPUT_REL_X>;
+		};
+		y-ch {
+			io-channels = <&adc 1>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <100>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_KEY>;
+			input-code = <INPUT_REL_Y>;
+
+			/* enable report mdoe for gamepad axix or knob */
+			/* to only call input_report on quantquantized value is updated */
+			report-on-change-only;
+
+		};
+	};
+
+
+	// 90-=  ??
+	anin3: analog_input_3 {
+		compatible = "zmk,analog-input";
+		sampling-hz = <100>;
+		x-ch {
+			io-channels = <&adc 0>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <300>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_KEY>;
+			input-code = <INPUT_REL_X>;
+		};
+		y-ch {
+			io-channels = <&adc 1>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <100>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_KEY>;
+			input-code = <INPUT_REL_Y>;
+
+			/* enable report mdoe for gamepad axix or knob */
+			/* to only call input_report on quantquantized value is updated */
+			report-on-change-only;
+
+		};
+	};
+
+
+	// []\/  ??
+	anin4: analog_input_4 {
+		compatible = "zmk,analog-input";
+		sampling-hz = <100>;
+		x-ch {
+			io-channels = <&adc 0>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <300>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_KEY>;
+			input-code = <INPUT_REL_X>;
+		};
+		y-ch {
+			io-channels = <&adc 1>;
+			mv-mid = <512>;
+			mv-min-max = <10>;
+			mv-deadzone = <100>;
+			scale-multiplier = <1>;
+			scale-divisor = <1>;
+			invert;
+			evt-type = <INPUT_EV_KEY>;
+			input-code = <INPUT_REL_Y>;
+
+			/* enable report mdoe for gamepad axix or knob */
+			/* to only call input_report on quantquantized value is updated */
+			report-on-change-only;
+
+		};
+	};
+
+
+//    joystick_listener: joystick_listener {
+//        compatible = "zmk,input-listener";
+//        device = <&anin0>;
+//    };
+
+
 };
 
-/ {
-    joystick_listener {
-        compatible = "zmk,input-listener";
-        device = <&anin0>;
-    };
-};

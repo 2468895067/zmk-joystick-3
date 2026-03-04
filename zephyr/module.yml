@@ -1,4 +1,0 @@
-name: zmk-analog-input
-build:
-  settings:
-    board_root: .

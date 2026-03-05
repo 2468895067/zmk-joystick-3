@@ -8,7 +8,7 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 /* Reference: https://docs.zephyrproject.org/apidoc/latest/group__input__events.html */
 #include <input/processors.dtsi>
-#include <sofle_physical_layouts.dtsi>
+#include <sofle-physical-layouts.dtsi>
 #include <dt-bindings/zmk/pointing.h>
 
 

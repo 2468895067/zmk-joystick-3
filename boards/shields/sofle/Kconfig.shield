@@ -4,5 +4,3 @@
 config SHIELD_SOFLE_J
     def_bool $(shields_list_contains,sofle_J)
 
-config SHIELD_SOFLE_RIGHT
-    def_bool $(shields_list_contains,sofle_right)

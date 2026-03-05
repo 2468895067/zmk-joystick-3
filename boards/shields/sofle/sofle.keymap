@@ -9,12 +9,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    chosen {
-        zmk,physical-layout = &default_layout;
-    };
-};
+    // Activate ADJUST layer by pressing raise and lower
 
-/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust_layer {
+            if-layers = <0 0>;
+            then-layer = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

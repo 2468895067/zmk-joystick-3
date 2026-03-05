@@ -35,12 +35,12 @@
             ;
 
     	col-gpios
-        	= <&pro_micro 4 GPIO_ACTIVE_HIGH>
-        	, <&pro_micro 5 GPIO_ACTIVE_HIGH>
-        	, <&pro_micro 6 GPIO_ACTIVE_HIGH>
-        	, <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        	= <&pro_micro 9 GPIO_ACTIVE_HIGH>
         	, <&pro_micro 8 GPIO_ACTIVE_HIGH>
-        	, <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        	, <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        	, <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        	, <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        	, <&pro_micro 4 GPIO_ACTIVE_HIGH>
         	;
     };
 };
@@ -55,7 +55,7 @@
 		sampling-hz = <100>;
 		x-ch {
 			io-channels = <&adc 0>;
-			mv-mid = <512>;
+			mv-mid = <1650>;
 			mv-min-max = <10>;
 			mv-deadzone = <100>;
 			scale-multiplier = <1>;
@@ -65,8 +65,8 @@
 			input-code = <INPUT_REL_X>;
 		};
 		y-ch {
-			io-channels = <&adc 1>;
-			mv-mid = <512>;
+			io-channels = <&adc 5>;
+			mv-mid = <1650>;
 			mv-min-max = <10>;
 			mv-deadzone = <100>;
 			scale-multiplier = <1>;
@@ -88,7 +88,7 @@
 		sampling-hz = <100>;
 		x-ch {
 			io-channels = <&adc 0>;
-			mv-mid = <512>;
+			mv-mid = <1650>;
 			mv-min-max = <10>;
 			mv-deadzone = <100>;
 			scale-multiplier = <1>;
@@ -98,8 +98,8 @@
 			input-code = <INPUT_REL_HWHEEL>;
 		};
 		y-ch {
-			io-channels = <&adc 1>;
-			mv-mid = <512>;
+			io-channels = <&adc 5>;
+			mv-mid = <1650>;
 			mv-min-max = <10>;
 			mv-deadzone = <100>;
 			scale-multiplier = <1>;

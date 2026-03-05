@@ -4,7 +4,7 @@
 if SHIELD_SOFLE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Sofle"
+    default "ChosenOne"
 
 config ZMK_POINTING
     default y
@@ -39,21 +39,6 @@ config USB_DEVICE_STACK
 
 endif # USB
 
-if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-if ZMK_DISPLAY
-
-config I2C
-    default y
-
-config SSD1306
-    default y
-
-endif # ZMK_DISPLAY
-
 if LVGL
 
 config LV_Z_VDB_SIZE
@@ -71,7 +56,6 @@ endchoice
 
 endif # LVGL
 
-endif
 
 
 # Copyright (c) 2020 The ZMK Contributors

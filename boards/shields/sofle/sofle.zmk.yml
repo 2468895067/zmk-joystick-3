@@ -2,7 +2,7 @@ file_format: "1"
 id: sofle
 name: Sofle
 type: shield
-url: https://github.com/josefadamcik/SofleKeyboard
+url: https://github.com/2468895067/zmk-joystick-3
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:

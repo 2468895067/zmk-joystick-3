@@ -26,9 +26,9 @@
         default_layer {
 
             bindings = <
-    &mo 1      &kp PAGE_DOWN  &kp ESC    &mo 4         &kp DOWN   &kp CAPS  
-    &kp HOME   &kp END        &kp ENTER  &kp LEFT      &kp RIGHT  &mo 3         
-    &kp PG_UP  &mo 2          &mkp LCLK  &kp UP_ARROW  &trans     &trans         
+    &mo 1      &kp PAGE_DOWN  &kp ESC      &mo 4         &kp DOWN   &kp CAPS  
+    &kp HOME   &kp END        &kp ENTER    &kp LEFT      &kp RIGHT  &mo 3         
+    &kp PG_UP  &mo 2          &bt BT_CLR   &kp UP_ARROW  &trans     &trans         
             >;
 
         };

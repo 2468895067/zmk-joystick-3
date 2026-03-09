@@ -42,7 +42,7 @@
 		};
 		y-ch {
 			io-channels = <&adc 5>;
-			mv-mid = <2050>;
+			mv-mid = <1750>;
 			mv-min-max = <10>;
 			mv-deadzone = <400>;
 			scale-multiplier = <1>;

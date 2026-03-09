@@ -24,14 +24,16 @@
 };
 
 / {
-	anin0: analog_input_0 {
+
+	// MOUSE MOVE
+	anin1: analog_input_1 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
 		x-ch {
-			io-channels = <&adc 1>;
+			io-channels = <&adc 0>;
 			mv-mid = <1650>;
 			mv-min-max = <10>;
-			mv-deadzone = <100>;
+			mv-deadzone = <200>;
 			scale-multiplier = <1>;
 			scale-divisor = <1>;
 			invert;
@@ -39,25 +41,25 @@
 			input-code = <INPUT_REL_X>;
 		};
 		y-ch {
-			io-channels = <&adc 2>;
-			mv-mid = <1650>;
+			io-channels = <&adc 5>;
+			mv-mid = <2050>;
 			mv-min-max = <10>;
-			mv-deadzone = <100>;
+			mv-deadzone = <400>;
 			scale-multiplier = <1>;
 			scale-divisor = <1>;
 			invert;
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_Y>;
-
-			/* enable report mdoe for gamepad axix or knob */
-			/* to only call input_report on quantquantized value is updated */
-			report-on-change-only;
-
 		};
 	};
 
-    joystick_listener {
-        compatible = "zmk,input-listener";
-        device = <&anin0>;
-    };
+};
+
+/ {
+		// MOUSE MOVE
+		joystick_listener_1 {
+    		status = "okay";
+		    compatible = "zmk,input-listener";
+		    device = <&anin1>;
+		};
 };
